@@ -1,4 +1,5 @@
 import { Banner } from "./Components/Banner";
+import { CallToAction } from "./Components/CallToAction/CallToAction";
 import { OurCustomers } from "./Components/Customers/OurCustomers";
 import { Navbar } from "./Components/Navbar";
 import { OurProcess } from "./Components/Process/OurProcess";
@@ -14,6 +15,7 @@ export default function Home() {
 
       <OurProcess />
       <OurCustomers />
+      <CallToAction />
     </>
   );
 }
