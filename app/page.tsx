@@ -1,4 +1,5 @@
 import { Banner } from "./Components/Banner";
+import { OurCustomers } from "./Components/Customers/OurCustomers";
 import { Navbar } from "./Components/Navbar";
 import { OurProcess } from "./Components/Process/OurProcess";
 import { ProyectsSection } from "./Components/Proyects/ProyectsSection";
@@ -12,6 +13,7 @@ export default function Home() {
       <ProyectsSection />
 
       <OurProcess />
+      <OurCustomers />
     </>
   );
 }
