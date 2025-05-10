@@ -1,19 +1,65 @@
+"use client";
+
 import Link from "next/link";
+import { useState } from "react";
 
 export const Navbar = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   return (
-    <div className="sticky top-0 z-40 w-full border-b bg-white/80 backdrop-blur-sm">
-      <div className="container flex h-16 items-center justify-between">
+    <div className="sticky top-0 z-40 w-full border-b container bg-white/80 backdrop-blur-sm">
+      <div className="flex h-16 items-center justify-between">
         {/* Logo */}
-        <div className="logo text-xl font-bold">Logo</div>
+        <div className="logo text-xl font-bold">Coodisy</div>
+
+        {/* Hamburger Menu Button */}
+        <button
+          className="md:hidden p-2 relative w-10 h-10 flex items-center justify-center"
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
+          aria-label="Toggle menu"
+        >
+          <div className="relative w-6 h-6">
+            <span
+              className={`absolute h-0.5 w-6 bg-gray-800 transform transition-all duration-300 ease-in-out ${
+                isMenuOpen ? "rotate-45 top-3" : "top-1"
+              }`}
+            ></span>
+            <span
+              className={`absolute h-0.5 w-6 bg-gray-800 top-3 transition-all duration-300 ease-in-out ${
+                isMenuOpen ? "opacity-0" : "opacity-100"
+              }`}
+            ></span>
+            <span
+              className={`absolute h-0.5 w-6 bg-gray-800 transform transition-all duration-300 ease-in-out ${
+                isMenuOpen ? "-rotate-45 top-3" : "top-5"
+              }`}
+            ></span>
+          </div>
+        </button>
 
         {/* Navbar Links */}
-        <nav className="hidden md:flex nav-links">
-          <ul className="flex space-x-6">
+        <nav
+          className={`${
+            isMenuOpen
+              ? "opacity-100 translate-y-0"
+              : "opacity-0 -translate-y-2 pointer-events-none"
+          } md:opacity-100 md:translate-y-0 md:pointer-events-auto transition-all duration-300 ease-in-out absolute md:relative top-16 md:top-0 left-0 w-full md:w-auto bg-white md:bg-transparent shadow-lg md:shadow-none`}
+        >
+          <ul className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-6 p-4 md:p-0">
             <li>
               <Link
                 href="/"
-                className="text-gray-800 hover:text-blue-600 transition-colors "
+                className="block text-gray-800 hover:text-blue-600 transition-colors"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Inicio
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/Servicios"
+                className="block text-gray-800 hover:text-blue-600 transition-colors"
+                onClick={() => setIsMenuOpen(false)}
               >
                 Servicios
               </Link>
@@ -21,31 +67,16 @@ export const Navbar = () => {
             <li>
               <Link
                 href="/about"
-                className="text-gray-800 hover:text-blue-600 transition-colors "
+                className="block text-gray-800 hover:text-blue-600 transition-colors"
               >
                 Proyectos
               </Link>
             </li>
             <li>
               <Link
-                href="/services"
-                className="text-gray-800 hover:text-blue-600 transition-colors "
-              >
-                Proceso
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="/contact"
-                className="text-gray-800 hover:text-blue-600 transition-colors "
-              >
-                Testimonios
-              </Link>
-            </li>
-            <li>
-              <Link
                 href="/blog"
-                className="text-gray-800 hover:text-blue-600 transition-colors "
+                className="block text-gray-800 hover:text-blue-600 transition-colors"
+                onClick={() => setIsMenuOpen(false)}
               >
                 Contacto
               </Link>
@@ -54,7 +85,7 @@ export const Navbar = () => {
         </nav>
 
         {/* Contact Button */}
-        <div>
+        <div className="hidden md:block">
           <Link
             href="/contact"
             className="bg-blue-primary text-white px-6 py-2 rounded-full hover:bg-blue-600 transition"

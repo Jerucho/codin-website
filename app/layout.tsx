@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { GeistSans } from "geist/font/sans";
 import "./globals.css";
+import { Navbar } from "./Components/Navbar";
 
 export const metadata: Metadata = {
   title: "Coodisy | Desarrollo de software a medida",
@@ -15,7 +16,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es">
-      <body className={`${GeistSans.className} antialiased`}>{children}</body>
+      <body className={`${GeistSans.className} antialiased`}>
+        <Navbar />
+        {children}
+      </body>
     </html>
   );
 }
