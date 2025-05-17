@@ -21,10 +21,7 @@ const services = [
 export const Services = () => {
   return (
     <div className="container flex flex-col items-center justify-center py-20">
-      <Title
-        title="Nuestros Servicios"
-        description="Descripción de nuestros servicios"
-      />
+      <Title title="Mis Servicios" description="Descripción de mis servicios" />
       <div className="grid gap-8 md:grid-cols-3 mt-10">
         {services.map((service, index) => (
           <CardService
