@@ -9,8 +9,8 @@ export default function Home() {
   return (
     <>
       <Banner />
-      <Services />
       <ProyectsSection />
+      <Services />
 
       <OurProcess />
       <OurCustomers />
