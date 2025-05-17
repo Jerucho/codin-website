@@ -20,8 +20,8 @@ export const OurCustomers = () => {
     <div className="py-20 bg-gradient-to-br from-blue-50 to-blue-100">
       <div>
         <Title
-          title="Esto dicen Nuestros Clientes"
-          description="Historias de éxito de quienes han confiado en nosotros"
+          title="Clientes que confiaron en mi"
+          description="Historias de éxito de quienes han confiado en mis servicios"
         />
       </div>
       <div className="flex flex-col md:flex-row justify-center items-center gap-4 mt-8">
