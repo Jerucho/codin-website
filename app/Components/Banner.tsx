@@ -2,7 +2,13 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import Link from "next/link";
 import { useRef } from "react";
-import { Github, Mail, Linkedin } from "lucide-react";
+import {
+  Github,
+  Mail,
+  Linkedin,
+  LinkedinIcon,
+  LucideLinkedin,
+} from "lucide-react";
 
 export const Banner = () => {
   const ref = useRef(null);
@@ -23,7 +29,7 @@ export const Banner = () => {
       aria-label="Banner Section"
     >
       <div className="absolute inset-0 bg-[url('./banner_leon.jpg')] bg-center bg-cover bg-fixed" />
-      <div className="absolute inset-0 bg-gradient-to-b from-black/70 to-black/50" />
+      <div className="absolute inset-0 bg-gradient-to-b from-black/1 to-black/50" />
 
       <motion.div
         style={{ y, opacity, scale }}
@@ -62,19 +68,19 @@ export const Banner = () => {
               <span>GitHub</span>
             </Link>
             <Link
-              href="mailto:tu-email@ejemplo.com"
-              className="flex items-center gap-2 text-white hover:text-blue-400 transition-colors"
-            >
-              <Mail className="w-6 h-6" />
-              <span>Email</span>
-            </Link>
-            <Link
               href="https://linkedin.com/in/tu-usuario"
               target="_blank"
               className="flex items-center gap-2 text-white hover:text-blue-400 transition-colors"
             >
               <Linkedin className="w-6 h-6" />
               <span>LinkedIn</span>
+            </Link>
+            <Link
+              href="mailto:hola@jeremiasamador.com"
+              className="flex items-center gap-2 text-white hover:text-blue-400 transition-colors"
+            >
+              <Mail className="w-6 h-6" />
+              <span>hola@jeremiasamador.com</span>
             </Link>
           </motion.div>
 
