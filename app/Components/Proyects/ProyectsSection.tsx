@@ -9,7 +9,7 @@ export const ProyectsSection = () => {
       <div className="flex gap-5 py-10 flex-col items-center justify-center w-full h-full bg-gray-100 dark:bg-gray-900">
         <Title
           title="Proyectos Destacados"
-          description="Explora algunos de nuestros trabajos más recientes y descubre cómo ayudamos a nuestros clientes"
+          description="Explora algunos de mis trabajos más recientes y descubre cómo ayudé a mis clientes"
         />
         <div className="container flex flex-col md:flex-row gap-6">
           <ProyectCard
