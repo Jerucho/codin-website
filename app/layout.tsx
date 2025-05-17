@@ -4,9 +4,12 @@ import "./globals.css";
 import { Navbar } from "./Components/Navbar";
 
 export const metadata: Metadata = {
-  title: "Coodisy | Desarrollo de software a medida",
+  icons: {
+    icon: "./favicon.ico",
+  },
+  title: "Jeremias Amador | Desarrollo de software a medida",
   description:
-    "Desarrollo de software a medida y soluciones tecnológicas innovadoras. Creamos aplicaciones web, móviles y sistemas robustos para impulsar tu negocio",
+    "Desarrollador web fullstack especializado en crear soluciones digitales innovadoras. Ofrezco servicios de desarrollo web, aplicaciones móviles, consultoría IT y diseño UX/UI. Transformo ideas en experiencias digitales excepcionales con las últimas tecnologías y mejores prácticas de desarrollo.",
 };
 
 export default function RootLayout({
