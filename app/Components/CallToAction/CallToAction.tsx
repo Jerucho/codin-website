@@ -8,13 +8,13 @@ export const CallToAction = () => {
           ¿Listo para llevar tu proyecto al siguiente nivel?
         </h2>
         <p className="text-lg text-white mb-6">
-          Contáctanos y descubre cómo podemos ayudarte a alcanzar tus metas.
+          Contáctame y descubre cómo puedo ayudarte a alcanzar tus metas.
         </p>
         <Link
           href={"/contacto"}
           className="bg-white text-blue-600 px-6 py-3 rounded-lg shadow-md hover:shadow-2xl transition duration-300 text-2xl"
         >
-          Contáctanos
+          Contáctame
         </Link>
       </div>
     </div>
