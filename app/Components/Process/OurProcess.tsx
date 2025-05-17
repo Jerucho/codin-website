@@ -9,25 +9,25 @@ const listOfProcess = [
     icon: <Users className="h-6 w-6" />,
     title: "Descubrimiento",
     description:
-      "Entendemos tus objetivos, audiencia y necesidades específicas para crear una estrategia personalizada.",
+      "Capturo tus objetivos, audiencia y necesidades específicas para crear una estrategia personalizada.",
   },
   {
     icon: <Layers className="h-6 w-6" />,
     title: "Diseño",
     description:
-      "Creamos wireframes y diseños visuales que reflejan tu marca y ofrecen una experiencia de usuario excepcional.",
+      "Creo wireframes y diseños visuales que reflejan tu marca y ofrecen una experiencia de usuario excepcional.",
   },
   {
     icon: <Code className="h-6 w-6" />,
     title: "Desarrollo",
     description:
-      "Transformamos los diseños en código, construyendo tu sitio con las tecnologías más modernas y eficientes.",
+      "Transformo los diseños en código, construyendo tu sitio con las tecnologías más modernas y eficientes.",
   },
   {
     icon: <Zap className="h-6 w-6" />,
     title: "Lanzamiento",
     description:
-      "Realizamos pruebas exhaustivas y optimizamos el rendimiento antes de lanzar tu sitio al mundo.",
+      "Realizo pruebas exhaustivas y optimizo el rendimiento antes de lanzar tu sitio al mundo.",
   },
 ];
 export function OurProcess() {
@@ -36,7 +36,7 @@ export function OurProcess() {
       <div className="container">
         <div className="text-center mb-16">
           <Title
-            title="Nuestro Proceso"
+            title="Proceso de Trabajo"
             description="Un enfoque estructurado para garantizar resultados excepcionales en cada proyecto"
           />
         </div>
