@@ -2,6 +2,7 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import Link from "next/link";
 import { useRef } from "react";
+import { Github, Mail, Linkedin } from "lucide-react";
 
 export const Banner = () => {
   const ref = useRef(null);
@@ -22,26 +23,82 @@ export const Banner = () => {
       aria-label="Banner Section"
     >
       <div className="absolute inset-0 bg-[url('./banner_leon.jpg')] bg-center bg-cover bg-fixed" />
-      <div className="absolute inset-0 bg-black/50" />
+      <div className="absolute inset-0 bg-gradient-to-b from-black/70 to-black/50" />
 
       <motion.div
         style={{ y, opacity, scale }}
         className="relative z-10 h-full container mx-auto px-4 flex items-center"
       >
         <div className="max-w-2xl text-white">
-          <h1 className="text-5xl font-bold mb-4">
-            Desarrollo de Páginas Web y Aplicaciones Móviles
-          </h1>
-          <p className="text-2xl mb-8">
-            Transformamos ideas en experiencias digitales
-          </p>
-          <Link
-            href="/contacto"
-            className="bg-blue-primary text-white px-6 py-2 rounded-full hover:bg-blue-600 transition duration-300 text-xl"
-            aria-label="Contáctanos"
+          <motion.h1
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            className="text-6xl font-bold mb-4 bg-gradient-to-r from-blue-400 to-blue-600 bg-clip-text text-transparent"
           >
-            Contáctanos
-          </Link>
+            Fullstack Developer
+          </motion.h1>
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            className="text-2xl mb-8 text-gray-200"
+          >
+            Transformando ideas en experiencias digitales excepcionales
+          </motion.h2>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.3 }}
+            className="flex gap-4 mb-8"
+          >
+            <Link
+              href="https://github.com/tu-usuario"
+              target="_blank"
+              className="flex items-center gap-2 text-white hover:text-blue-400 transition-colors"
+            >
+              <Github className="w-6 h-6" />
+              <span>GitHub</span>
+            </Link>
+            <Link
+              href="mailto:tu-email@ejemplo.com"
+              className="flex items-center gap-2 text-white hover:text-blue-400 transition-colors"
+            >
+              <Mail className="w-6 h-6" />
+              <span>Email</span>
+            </Link>
+            <Link
+              href="https://linkedin.com/in/tu-usuario"
+              target="_blank"
+              className="flex items-center gap-2 text-white hover:text-blue-400 transition-colors"
+            >
+              <Linkedin className="w-6 h-6" />
+              <span>LinkedIn</span>
+            </Link>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.4 }}
+            className="flex gap-4"
+          >
+            <Link
+              href="/contacto"
+              className="bg-blue-600 text-white px-8 py-3 rounded-full hover:bg-blue-700 transition duration-300 text-lg font-medium hover:scale-105"
+              aria-label="Contáctame"
+            >
+              Contáctame
+            </Link>
+            <Link
+              href="/proyectos"
+              className="border-2 border-white text-white px-8 py-3 rounded-full hover:bg-white hover:text-blue-600 transition duration-300 text-lg font-medium hover:scale-105"
+              aria-label="Ver proyectos"
+            >
+              Ver proyectos
+            </Link>
+          </motion.div>
         </div>
       </motion.div>
     </header>
