@@ -5,8 +5,8 @@ export const Footer = () => {
     <footer className="py-8">
       <div className="container flex justify-center flex-wrap">
         <div className="w-full md:w-1/4 mb-8 md:mb-0">
-          <h2 className="text-3xl">Codin</h2>
-          <p>Transformamos ideas en experiencias digitales excepcionales.</p>
+          <h2 className="text-3xl">Jeremias Amador</h2>
+          <p>Transformo ideas en experiencias digitales excepcionales.</p>
         </div>
         <div className="w-full md:w-1/4 mb-8 md:mb-0">
           <h3 className="text-xl font-medium">Servicios</h3>
@@ -146,13 +146,11 @@ export const Footer = () => {
       </div>
       <div className="container mt-10 text-center">
         <p className="text-gray-500">
-          &copy; {new Date().getFullYear()} Codin. Todos los derechos
+          &copy; {new Date().getFullYear()} Jeremias Amador. Todos los derechos
           reservados.
         </p>
-        <p className="text-gray-500">Hecho con ❤️ por Codin</p>
-        <p className="text-gray-500">
-          Desarrolladores apasionados por la tecnología.
-        </p>
+        <p className="text-gray-500">Hecho con ❤️ por Jeremías</p>
+        <p className="text-gray-500">Apasionado por la tecnología.</p>
       </div>
     </footer>
   );
