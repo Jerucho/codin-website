@@ -10,7 +10,7 @@ export const Navbar = () => {
     <div className="sticky top-0 z-40 w-full border-b container bg-white/80 backdrop-blur-sm">
       <div className="flex h-16 items-center justify-between">
         {/* Logo */}
-        <div className="logo text-xl font-bold">Coodisy</div>
+        <div className="logo text-xl font-bold">Jeremias Amador</div>
 
         {/* Hamburger Menu Button */}
         <button
@@ -90,7 +90,7 @@ export const Navbar = () => {
             href="/contact"
             className="bg-blue-primary text-white px-6 py-2 rounded-full hover:bg-blue-600 transition"
           >
-            Contáctanos
+            Contáctame
           </Link>
         </div>
       </div>
