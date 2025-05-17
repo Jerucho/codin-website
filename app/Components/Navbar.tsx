@@ -57,19 +57,19 @@ export const Navbar = () => {
             </li>
             <li>
               <Link
+                href="/about"
+                className="block text-gray-800 hover:text-blue-600 transition-colors"
+              >
+                Proyectos
+              </Link>
+            </li>
+            <li>
+              <Link
                 href="/Servicios"
                 className="block text-gray-800 hover:text-blue-600 transition-colors"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Servicios
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="/about"
-                className="block text-gray-800 hover:text-blue-600 transition-colors"
-              >
-                Proyectos
               </Link>
             </li>
             <li>
