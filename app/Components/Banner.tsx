@@ -3,8 +3,14 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import Link from "next/link";
 import { useRef } from "react";
 import { Github, Mail, Linkedin } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
-export const Banner = () => {
+type BannerProps = {
+  onProyectsClick: () => void;
+  onContactClick: () => void;
+};
+
+export const Banner = ({ onProyectsClick, onContactClick }: BannerProps) => {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -85,20 +91,21 @@ export const Banner = () => {
             transition={{ duration: 0.5, delay: 0.4 }}
             className="flex flex-col sm:flex-row gap-4"
           >
-            <Link
-              href="/contacto"
-              className="bg-blue-600 text-white px-6 md:px-8 py-3 rounded-full hover:bg-blue-700 transition duration-300 text-base md:text-lg font-medium hover:scale-105 text-center"
+            <Button
+              className="bg-blue-600 text-white px-6 md:px-8 py-5 rounded-full hover:bg-blue-700 transition duration-300 text-base md:text-lg font-medium hover:scale-105 text-center w-full sm:w-auto"
               aria-label="Contáctame"
+              onClick={() => onContactClick()}
             >
               Contáctame
-            </Link>
-            <Link
-              href="/proyectos"
-              className="border-2 border-white text-white px-6 md:px-8 py-3 rounded-full hover:bg-white hover:text-blue-600 transition duration-300 text-base md:text-lg font-medium hover:scale-105 text-center"
+            </Button>
+            <Button
+              variant="outline"
+              className=" border-white/80 text-black px-6 md:px-8 py-5 rounded-full hover:bg-white/20 hover:border-white hover:text-white transition-all duration-300 text-base md:text-lg font-medium hover:scale-105 text-center backdrop-blur-sm w-full sm:w-auto"
               aria-label="Ver proyectos"
+              onClick={() => onProyectsClick()}
             >
               Ver proyectos
-            </Link>
+            </Button>
           </motion.div>
         </div>
       </motion.div>

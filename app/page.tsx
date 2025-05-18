@@ -25,7 +25,10 @@ export default function Home() {
         onContactClick={() => scrollTo(contactRef)}
         // onCustomersClick={() => scrollTo(customersRef)}
       />
-      <Banner />
+      <Banner
+        onProyectsClick={() => scrollTo(proyectsRef)}
+        onContactClick={() => scrollTo(contactRef)}
+      />
       <ProyectsSection proyectsRef={proyectsRef} />
       <Services servicesRef={servicesRef} />
       <OurProcess />

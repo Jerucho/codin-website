@@ -128,13 +128,16 @@ NavbarProps) => {
 
         {/* Contact Button */}
         <div className="hidden md:block">
-          <Link
-            href="/contacto"
+          <button
+            onClick={() => {
+              onContactClick();
+              setIsMenuOpen(false);
+            }}
             className="bg-blue-primary text-white px-6 py-2 rounded-full hover:bg-blue-600 transition cursor-pointer"
             aria-label="Ir a contacto"
           >
             Contáctame
-          </Link>
+          </button>
         </div>
       </div>
     </nav>
