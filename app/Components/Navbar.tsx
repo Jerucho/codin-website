@@ -6,15 +6,15 @@ type NavbarProps = {
   onProyectsClick: () => void;
   onServicicesClick: () => void;
   onContactClick: () => void;
-  onCustomersClick: () => void;
+  // onCustomersClick: () => void;
 };
 
 export const Navbar = ({
   onProyectsClick,
   onServicicesClick,
   onContactClick,
-  onCustomersClick,
-}: NavbarProps) => {
+}: // onCustomersClick,
+NavbarProps) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
@@ -99,7 +99,7 @@ export const Navbar = ({
                 Servicios
               </button>
             </li>
-            <li>
+            {/* <li>
               <button
                 onClick={() => {
                   onCustomersClick();
@@ -110,7 +110,7 @@ export const Navbar = ({
               >
                 Clientes
               </button>
-            </li>
+            </li> */}
             <li>
               <button
                 onClick={() => {
