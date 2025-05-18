@@ -8,6 +8,47 @@ interface MoreProyectsProps {
   show: boolean;
   onClose: () => void;
 }
+const proyects = [
+  {
+    title: "Web + Admin | Genesis Colper",
+    short_description:
+      "Sitio web corporativo con panel de administración para empresa de logística y transporte de libros",
+    description:
+      "Genesis Colper es una empresa que se dedica a la logística y transporte de libros. Necesitaba un sitio web para mostrar sus servicios y contactar con ellos." +
+      "Además, necesitaba un sistema de gestión para poder administrar sus datos y servicios.",
+    stack: [
+      "React",
+      "Next.js",
+      "Tailwind CSS",
+      "Node.js",
+      "Express",
+      "MySQL",
+      "JWT",
+      "Docker",
+    ],
+    image: genesisColperIMG,
+  },
+  {
+    title: "Sitio Web + Admin | Transporte Don Juan",
+    short_description:
+      "Sitio web corporativo con panel de administración para empresa de transporte de cargas a nivel nacional",
+    description:
+      "Don Juan es una empresa argentina con trayectoria en el rubro de transporte de cargas a nivel nacional. Con el objetivo de dar a conocer sus servicios y llegar a más clientes, decidió dar el paso hacia la digitalización creando su sitio web oficial..",
+    stack: ["React", "Next.js", "Tailwind CSS"],
+    image: genesisColperIMG,
+  },
+  {
+    title: "Sitio Web | Café Nativo",
+    short_description:
+      "Sitio web corporativo para una cafetería artesanal que ofrece productos orgánicos y de comercio justo",
+    description:
+      "Café Nativo es una cafetería artesanal que se especializa en ofrecer café de origen único y productos orgánicos. " +
+      "El sitio web fue diseñado para mostrar su filosofía de comercio justo, su proceso de tostado artesanal y su compromiso con la sostenibilidad. " +
+      "Incluye una sección de blog para compartir conocimientos sobre café y un sistema de reservas para eventos y catas.",
+    stack: ["React", "Next.js", "Tailwind CSS", "TypeScript", "Framer Motion"],
+    image: genesisColperIMG,
+  },
+];
 
 export const MoreProyects = ({ show, onClose }: MoreProyectsProps) => {
   return (
@@ -62,38 +103,7 @@ export const MoreProyects = ({ show, onClose }: MoreProyectsProps) => {
             </motion.div>
             <div className="h-full mt-6 md:mt-10">
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 lg:gap-10 pb-10">
-                {[
-                  {
-                    title: "Proyecto 1",
-                    description: "Descripción del proyecto 1",
-                    image: genesisColperIMG,
-                  },
-                  {
-                    title: "Proyecto 2",
-                    description: "Descripción del proyecto 2",
-                    image: genesisColperIMG,
-                  },
-                  {
-                    title: "Proyecto 3",
-                    description: "Descripción del proyecto 3",
-                    image: genesisColperIMG,
-                  },
-                  {
-                    title: "Proyecto 4",
-                    description: "Descripción del proyecto 4",
-                    image: genesisColperIMG,
-                  },
-                  {
-                    title: "Proyecto 5",
-                    description: "Descripción del proyecto 5",
-                    image: genesisColperIMG,
-                  },
-                  {
-                    title: "Proyecto 6",
-                    description: "Descripción del proyecto 6",
-                    image: genesisColperIMG,
-                  },
-                ].map((proyect, index) => (
+                {proyects.map((proyect, index) => (
                   <motion.div
                     key={index}
                     initial={{ y: 50, opacity: 0 }}
@@ -114,6 +124,8 @@ export const MoreProyects = ({ show, onClose }: MoreProyectsProps) => {
                       description={proyect.description}
                       image={genesisColperIMG}
                       className="text-white"
+                      short_description={proyect.short_description}
+                      stack={proyect.stack}
                     />
                   </motion.div>
                 ))}

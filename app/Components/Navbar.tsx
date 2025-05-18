@@ -6,7 +6,6 @@ type NavbarProps = {
   onProyectsClick: () => void;
   onServicicesClick: () => void;
   onContactClick: () => void;
-  onProcessClick: () => void;
   onCustomersClick: () => void;
 };
 
@@ -14,7 +13,6 @@ export const Navbar = ({
   onProyectsClick,
   onServicicesClick,
   onContactClick,
-  onProcessClick,
   onCustomersClick,
 }: NavbarProps) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -104,7 +102,7 @@ export const Navbar = ({
             <li>
               <button
                 onClick={() => {
-                  onProcessClick();
+                  onCustomersClick();
                   setIsMenuOpen(false);
                 }}
                 className="block w-full text-left text-gray-800 hover:text-blue-600 transition-colors cursor-pointer"

@@ -12,7 +12,6 @@ import { Navbar } from "./Components/Navbar";
 export default function Home() {
   const proyectsRef = useRef<HTMLDivElement>(null);
   const servicesRef = useRef<HTMLDivElement>(null);
-  const processRef = useRef<HTMLDivElement>(null);
   const customersRef = useRef<HTMLDivElement>(null);
   const contactRef = useRef<HTMLDivElement>(null);
   const scrollTo = (ref: React.RefObject<HTMLElement | null>) => {
@@ -24,13 +23,12 @@ export default function Home() {
         onProyectsClick={() => scrollTo(proyectsRef)}
         onServicicesClick={() => scrollTo(servicesRef)}
         onContactClick={() => scrollTo(contactRef)}
-        onProcessClick={() => scrollTo(processRef)}
         onCustomersClick={() => scrollTo(customersRef)}
       />
       <Banner />
       <ProyectsSection proyectsRef={proyectsRef} />
       <Services servicesRef={servicesRef} />
-      <OurProcess processRef={processRef} />
+      <OurProcess />
       <OurCustomers customersRef={customersRef} />
       <CallToAction callToActionRef={contactRef} />
       <Footer />
