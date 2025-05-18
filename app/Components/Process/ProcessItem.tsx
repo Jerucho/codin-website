@@ -21,7 +21,7 @@ export const ProcessItem = ({
       viewport={{ once: true }}
       className="relative"
     >
-      <div className="">
+      <div className="flex justify-center">
         <div className="absolute left-1/2 -translate-x-1/2 -translate-y-1/2">
           <div className="flex h-12 w-12 items-center justify-center rounded-full border-4 border-white bg-blue-600 text-white shadow-md">
             {icon}
@@ -36,10 +36,10 @@ export const ProcessItem = ({
             transform: "translateY(0)",
             opacity: 1,
           }}
-          className="flex items-center over"
+          className="flex items-center w-full md:w-auto"
         >
           <div
-            className={`ml-12 md:ml-0 ${
+            className={`w-full md:w-auto mt-8 md:mt-0 ${
               index % 2 === 0 ? "md:mr-[50%] md:pr-12" : "md:ml-[50%] md:pl-12"
             }`}
           >
