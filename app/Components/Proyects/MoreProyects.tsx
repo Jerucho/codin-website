@@ -1,5 +1,5 @@
 "use client";
-import { AnimatePresence, motion } from "motion/react";
+import { AnimatePresence, motion } from "framer-motion";
 import { X } from "lucide-react";
 import { ProyectCard } from "./ProyectCard";
 import genesisColperIMG from "@/app/Assets/Img/Genesis.png";
@@ -113,7 +113,7 @@ export const MoreProyects = ({ show, onClose }: MoreProyectsProps) => {
                       title={proyect.title}
                       description={proyect.description}
                       image={genesisColperIMG}
-                      link="/proyect1"
+                      className="text-white"
                     />
                   </motion.div>
                 ))}

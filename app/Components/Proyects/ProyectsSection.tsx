@@ -32,19 +32,16 @@ export const ProyectsSection = ({
             title="Proyect 1"
             description="Description 1"
             image={genesisColperIMG}
-            link="/proyect1"
           />
           <ProyectCard
             title="Proyect 2"
             description="Description 2"
             image={genesisColperIMG2}
-            link="/proyect2"
           />
           <ProyectCard
             title="Proyect 3"
             description="Description 3"
             image={genesisColperIMG2}
-            link="/proyect3"
           />
         </div>
         <Button
