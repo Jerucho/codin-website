@@ -2,21 +2,40 @@
 
 import Link from "next/link";
 import { useState } from "react";
+type NavbarProps = {
+  onProyectsClick: () => void;
+  onServicicesClick: () => void;
+  onContactClick: () => void;
+  onProcessClick: () => void;
+  onCustomersClick: () => void;
+};
 
-export const Navbar = () => {
+export const Navbar = ({
+  onProyectsClick,
+  onServicicesClick,
+  onContactClick,
+  onProcessClick,
+  onCustomersClick,
+}: NavbarProps) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <div className="sticky top-0 z-40 w-full border-b container bg-white/80 backdrop-blur-sm">
+    <nav className="sticky top-0 z-40 w-full border-b container bg-white/80 backdrop-blur-sm">
       <div className="flex h-16 items-center justify-between">
         {/* Logo */}
-        <div className="logo text-xl font-bold">Jeremias Amador</div>
+        <Link
+          href="/"
+          className="text-xl font-bold hover:text-blue-600 transition-colors"
+        >
+          Jeremias Amador
+        </Link>
 
         {/* Hamburger Menu Button */}
         <button
           className="md:hidden p-2 relative w-10 h-10 flex items-center justify-center"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
           aria-label="Toggle menu"
+          aria-expanded={isMenuOpen}
         >
           <div className="relative w-6 h-6">
             <span
@@ -38,7 +57,7 @@ export const Navbar = () => {
         </button>
 
         {/* Navbar Links */}
-        <nav
+        <div
           className={`${
             isMenuOpen
               ? "opacity-100 translate-y-0"
@@ -47,53 +66,79 @@ export const Navbar = () => {
         >
           <ul className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-6 p-4 md:p-0">
             <li>
-              <Link
-                href="/"
-                className="block text-gray-800 hover:text-blue-600 transition-colors"
-                onClick={() => setIsMenuOpen(false)}
+              <button
+                onClick={() => {
+                  window.scrollTo({ top: 0, behavior: "smooth" });
+                  setIsMenuOpen(false);
+                }}
+                className="block w-full text-left text-gray-800 hover:text-blue-600 transition-colors cursor-pointer"
+                aria-label="Ver proyectos"
               >
                 Inicio
-              </Link>
+              </button>
             </li>
             <li>
-              <Link
-                href="/about"
-                className="block text-gray-800 hover:text-blue-600 transition-colors"
+              <button
+                onClick={() => {
+                  onProyectsClick();
+                  setIsMenuOpen(false);
+                }}
+                className="block w-full text-left text-gray-800 hover:text-blue-600 transition-colors cursor-pointer"
+                aria-label="Ver proyectos"
               >
                 Proyectos
-              </Link>
+              </button>
             </li>
             <li>
-              <Link
-                href="/Servicios"
-                className="block text-gray-800 hover:text-blue-600 transition-colors"
-                onClick={() => setIsMenuOpen(false)}
+              <button
+                onClick={() => {
+                  onServicicesClick();
+                  setIsMenuOpen(false);
+                }}
+                className="block w-full text-left text-gray-800 hover:text-blue-600 transition-colors cursor-pointer"
+                aria-label="Ver servicios"
               >
                 Servicios
-              </Link>
+              </button>
             </li>
             <li>
-              <Link
-                href="/blog"
-                className="block text-gray-800 hover:text-blue-600 transition-colors"
-                onClick={() => setIsMenuOpen(false)}
+              <button
+                onClick={() => {
+                  onProcessClick();
+                  setIsMenuOpen(false);
+                }}
+                className="block w-full text-left text-gray-800 hover:text-blue-600 transition-colors cursor-pointer"
+                aria-label="Ver clientes"
+              >
+                Clientes
+              </button>
+            </li>
+            <li>
+              <button
+                onClick={() => {
+                  onContactClick();
+                  setIsMenuOpen(false);
+                }}
+                className="block w-full text-left text-gray-800 hover:text-blue-600 transition-colors cursor-pointer"
+                aria-label="Ir a contacto"
               >
                 Contacto
-              </Link>
+              </button>
             </li>
           </ul>
-        </nav>
+        </div>
 
         {/* Contact Button */}
         <div className="hidden md:block">
           <Link
-            href="/contact"
-            className="bg-blue-primary text-white px-6 py-2 rounded-full hover:bg-blue-600 transition"
+            href="/contacto"
+            className="bg-blue-primary text-white px-6 py-2 rounded-full hover:bg-blue-600 transition cursor-pointer"
+            aria-label="Ir a contacto"
           >
             Contáctame
           </Link>
         </div>
       </div>
-    </div>
+    </nav>
   );
 };

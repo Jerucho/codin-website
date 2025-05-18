@@ -30,9 +30,13 @@ const listOfProcess = [
       "Realizo pruebas exhaustivas y optimizo el rendimiento antes de lanzar tu sitio al mundo.",
   },
 ];
-export function OurProcess() {
+export function OurProcess({
+  processRef,
+}: {
+  processRef: React.RefObject<HTMLDivElement | null>;
+}) {
   return (
-    <section id="proceso" className="py-20">
+    <section ref={processRef} id="proceso" className="py-20">
       <div className="container">
         <div className="text-center mb-16">
           <Title

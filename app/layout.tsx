@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { GeistSans } from "geist/font/sans";
 import "./globals.css";
-import { Navbar } from "./Components/Navbar";
 
 export const metadata: Metadata = {
   icons: {
@@ -19,10 +18,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es">
-      <body className={`${GeistSans.className} antialiased`}>
-        <Navbar />
-        {children}
-      </body>
+      <body className={`${GeistSans.className} antialiased`}>{children}</body>
     </html>
   );
 }

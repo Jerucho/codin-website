@@ -1,8 +1,12 @@
 import Link from "next/link";
 
-export const CallToAction = () => {
+export const CallToAction = ({
+  callToActionRef,
+}: {
+  callToActionRef: React.RefObject<HTMLDivElement | null>;
+}) => {
   return (
-    <div className="container my-20 ">
+    <div ref={callToActionRef} className="container py-20 ">
       <div className="border bg-blue-600 flex flex-col items-center justify-center text-center py-16 px-4 text-white rounded-3xl">
         <h2 className="text-5xl font-bold text-white mb-4">
           ¿Listo para llevar tu proyecto al siguiente nivel?

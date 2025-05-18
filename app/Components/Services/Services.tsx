@@ -18,9 +18,16 @@ const services = [
     icon: <Zap />,
   },
 ];
-export const Services = () => {
+export const Services = ({
+  servicesRef,
+}: {
+  servicesRef: React.RefObject<HTMLDivElement | null>;
+}) => {
   return (
-    <div className="container flex flex-col items-center justify-center py-20">
+    <div
+      ref={servicesRef}
+      className="container flex flex-col items-center justify-center py-20"
+    >
       <Title title="Mis Servicios" description="Descripción de mis servicios" />
       <div className="grid gap-8 md:grid-cols-3 mt-10">
         {services.map((service, index) => (

@@ -15,9 +15,16 @@ const customers = [
     text: "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
   },
 ];
-export const OurCustomers = () => {
+export const OurCustomers = ({
+  customersRef,
+}: {
+  customersRef: React.RefObject<HTMLDivElement | null>;
+}) => {
   return (
-    <div className="py-20 bg-gradient-to-br from-blue-50 to-blue-100">
+    <div
+      ref={customersRef}
+      className="py-20 bg-gradient-to-br from-blue-50 to-blue-100"
+    >
       <div>
         <Title
           title="Clientes que confiaron en mi"

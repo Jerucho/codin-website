@@ -6,7 +6,11 @@ import genesisColperIMG2 from "@/app/Assets/Img/GenesisColper.png";
 import { Button } from "@/components/ui/button";
 import { MoreProyects } from "./MoreProyects";
 import { useState } from "react";
-export const ProyectsSection = () => {
+export const ProyectsSection = ({
+  proyectsRef,
+}: {
+  proyectsRef: React.RefObject<HTMLDivElement | null>;
+}) => {
   const [showMoreProyects, setShowMoreProyects] = useState(false);
 
   const handleShowMoreProyects = () => {
@@ -15,7 +19,10 @@ export const ProyectsSection = () => {
 
   return (
     <>
-      <div className="flex gap-5 py-10 flex-col items-center justify-center w-full h-full bg-gray-100 dark:bg-gray-900">
+      <div
+        ref={proyectsRef}
+        className="flex gap-5 py-20 flex-col items-center justify-center w-full h-full bg-gray-100 dark:bg-gray-900"
+      >
         <Title
           title="Proyectos Destacados"
           description="Explora algunos de mis trabajos más recientes y descubre cómo ayudé a mis clientes"
