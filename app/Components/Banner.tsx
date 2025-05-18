@@ -54,7 +54,7 @@ export const Banner = () => {
             className="flex flex-wrap gap-4 mb-6 md:mb-8"
           >
             <Link
-              href="https://github.com/tu-usuario"
+              href="https://github.com/jerucho"
               target="_blank"
               className="flex items-center gap-2 text-white hover:text-blue-400 transition-colors text-sm md:text-base"
             >
@@ -62,7 +62,7 @@ export const Banner = () => {
               <span>GitHub</span>
             </Link>
             <Link
-              href="https://linkedin.com/in/tu-usuario"
+              href="https://linkedin.com/in/jeremias-amador"
               target="_blank"
               className="flex items-center gap-2 text-white hover:text-blue-400 transition-colors text-sm md:text-base"
             >
