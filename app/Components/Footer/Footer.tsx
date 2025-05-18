@@ -3,12 +3,12 @@ import Link from "next/link";
 export const Footer = () => {
   return (
     <footer className="py-8">
-      <div className="container flex justify-center flex-wrap">
-        <div className="w-full md:w-1/4 mb-8 md:mb-0">
+      <div className="container flex justify-between items-center flex-wrap">
+        <div className="w-full md:w-1/3 mb-8 md:mb-0 ">
           <h2 className="text-3xl">Jeremias Amador</h2>
           <p>Transformo ideas en experiencias digitales excepcionales.</p>
         </div>
-        <div className="w-full md:w-1/4 mb-8 md:mb-0">
+        <div className=" w-full md:w-1/3 mb-8 md:mb-0">
           <h3 className="text-xl font-medium">Servicios</h3>
           <ul className="list-none space-y-1 text-gray-500 mt-2">
             <li>
@@ -53,52 +53,7 @@ export const Footer = () => {
             </li>
           </ul>
         </div>
-        <div className="w-full md:w-1/4 mb-8 md:mb-0">
-          <h3 className="text-xl font-medium">Empresa</h3>
-          <ul className="list-none space-y-1 text-gray-500 mt-2">
-            <li>
-              <Link
-                href="/nosotros"
-                className="hover:text-blue-600 transition-colors"
-              >
-                Sobre nosotros
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="/blog"
-                className="hover:text-blue-600 transition-colors"
-              >
-                Blog
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="/contacto"
-                className="hover:text-blue-600 transition-colors"
-              >
-                Contacto
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="/privacidad"
-                className="hover:text-blue-600 transition-colors"
-              >
-                Política de privacidad
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="/terminos"
-                className="hover:text-blue-600 transition-colors"
-              >
-                Términos de servicio
-              </Link>
-            </li>
-          </ul>
-        </div>
-        <div className="w-full md:w-1/4 mb-8 md:mb-0">
+        <div className=" w-full md:w-1/3 mb-8 md:mb-0 ">
           <h3 className="text-xl font-medium">Legal</h3>
           <ul className="list-none space-y-1 text-gray-500 mt-2">
             <li>
