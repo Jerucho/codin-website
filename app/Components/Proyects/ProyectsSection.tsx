@@ -2,7 +2,8 @@
 import { Title } from "../Title";
 import { ProyectCard } from "./ProyectCard";
 import genesisColperIMG from "@/app/Assets/Img/Genesis.png";
-import genesisColperIMG2 from "@/app/Assets/Img/GenesisColper.png";
+import transporteIMG from "@/app/Assets/Img/TransporteDonJuan.png";
+import cafeIMG from "@/app/Assets/Img/CafeNativo.png";
 import { Button } from "@/components/ui/button";
 import { MoreProyects } from "./MoreProyects";
 import { useState } from "react";
@@ -34,7 +35,7 @@ const proyects = [
     description:
       "Don Juan es una empresa argentina con trayectoria en el rubro de transporte de cargas a nivel nacional. Con el objetivo de dar a conocer sus servicios y llegar a más clientes, decidió dar el paso hacia la digitalización creando su sitio web oficial..",
     stack: ["React", "Next.js", "Tailwind CSS"],
-    image: genesisColperIMG2,
+    image: transporteIMG,
   },
   {
     title: "Sitio Web | Café Nativo",
@@ -45,7 +46,7 @@ const proyects = [
       "El sitio web fue diseñado para mostrar su filosofía de comercio justo, su proceso de tostado artesanal y su compromiso con la sostenibilidad. " +
       "Incluye una sección de blog para compartir conocimientos sobre café y un sistema de reservas para eventos y catas.",
     stack: ["React", "Next.js", "Tailwind CSS", "TypeScript", "Framer Motion"],
-    image: genesisColperIMG,
+    image: cafeIMG,
   },
 ];
 
