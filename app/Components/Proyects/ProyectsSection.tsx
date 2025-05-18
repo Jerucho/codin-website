@@ -1,9 +1,18 @@
-import Link from "next/link";
+"use client";
 import { Title } from "../Title";
 import { ProyectCard } from "./ProyectCard";
 import genesisColperIMG from "@/app/Assets/Img/Genesis.png";
 import genesisColperIMG2 from "@/app/Assets/Img/GenesisColper.png";
+import { Button } from "@/components/ui/button";
+import { MoreProyects } from "./MoreProyects";
+import { useState } from "react";
 export const ProyectsSection = () => {
+  const [showMoreProyects, setShowMoreProyects] = useState(false);
+
+  const handleShowMoreProyects = () => {
+    setShowMoreProyects(!showMoreProyects);
+  };
+
   return (
     <>
       <div className="flex gap-5 py-10 flex-col items-center justify-center w-full h-full bg-gray-100 dark:bg-gray-900">
@@ -31,12 +40,17 @@ export const ProyectsSection = () => {
             link="/proyect3"
           />
         </div>
-        <Link
-          href="/newproyect"
-          className="mt-6 px-6 py-3 text-white bg-blue-600 hover:bg-blue-700 rounded-lg shadow-md transition-all duration-300 ease-in-out"
+        <Button
+          onClick={handleShowMoreProyects}
+          className="mt-6 px-8 py-6 text-lg cursor-pointer text-white bg-blue-600 hover:bg-blue-700 rounded-lg shadow-md transition-all duration-300 ease-in-out"
         >
           Ver más proyectos
-        </Link>
+        </Button>
+
+        <MoreProyects
+          show={showMoreProyects}
+          onClose={handleShowMoreProyects}
+        />
       </div>
     </>
   );
