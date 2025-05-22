@@ -2,7 +2,6 @@
 import { useRef } from "react";
 import { Banner } from "./Components/Banner";
 import { CallToAction } from "./Components/CallToAction/CallToAction";
-import { OurCustomers } from "./Components/Customers/OurCustomers";
 import { Footer } from "./Components/Footer/Footer";
 import { OurProcess } from "./Components/Process/OurProcess";
 import { ProyectsSection } from "./Components/Proyects/ProyectsSection";
