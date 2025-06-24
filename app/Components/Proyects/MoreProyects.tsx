@@ -3,6 +3,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { X } from "lucide-react";
 import { ProyectCard } from "./ProyectCard";
 import genesisColperIMG from "@/app/Assets/Img/Genesis.png";
+import transporteIMG from "@/app/Assets/Img/TransporteDonJuan.png";
 
 interface MoreProyectsProps {
   show: boolean;
@@ -10,7 +11,7 @@ interface MoreProyectsProps {
 }
 const proyects = [
   {
-    title: "Web + Admin | Genesis Colper",
+    title: "Genesis Colper",
     short_description:
       "Sitio web corporativo con panel de administración para empresa de logística y transporte de libros",
     description:
@@ -27,26 +28,17 @@ const proyects = [
       "Docker",
     ],
     image: genesisColperIMG,
+    liveUrl: "https://genesiscolper.com",
   },
   {
-    title: "Sitio Web + Admin | Transporte Don Juan",
+    title: "Transporte Don Juan",
     short_description:
       "Sitio web corporativo con panel de administración para empresa de transporte de cargas a nivel nacional",
     description:
       "Don Juan es una empresa argentina con trayectoria en el rubro de transporte de cargas a nivel nacional. Con el objetivo de dar a conocer sus servicios y llegar a más clientes, decidió dar el paso hacia la digitalización creando su sitio web oficial..",
     stack: ["React", "Next.js", "Tailwind CSS"],
-    image: genesisColperIMG,
-  },
-  {
-    title: "Sitio Web | Café Nativo",
-    short_description:
-      "Sitio web corporativo para una cafetería artesanal que ofrece productos orgánicos y de comercio justo",
-    description:
-      "Café Nativo es una cafetería artesanal que se especializa en ofrecer café de origen único y productos orgánicos. " +
-      "El sitio web fue diseñado para mostrar su filosofía de comercio justo, su proceso de tostado artesanal y su compromiso con la sostenibilidad. " +
-      "Incluye una sección de blog para compartir conocimientos sobre café y un sistema de reservas para eventos y catas.",
-    stack: ["React", "Next.js", "Tailwind CSS", "TypeScript", "Framer Motion"],
-    image: genesisColperIMG,
+    image: transporteIMG,
+    liveUrl: "https://transportes-don-juan.vercel.app/",
   },
 ];
 
@@ -122,7 +114,7 @@ export const MoreProyects = ({ show, onClose }: MoreProyectsProps) => {
                     <ProyectCard
                       title={proyect.title}
                       description={proyect.description}
-                      image={genesisColperIMG}
+                      image={proyect.image}
                       className="text-white"
                       short_description={proyect.short_description}
                       stack={proyect.stack}

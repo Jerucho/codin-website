@@ -8,6 +8,7 @@ interface ProyectCardProps {
   short_description: string;
   image: StaticImageData;
   stack: string[];
+  liveUrl?: string;
   className?: string;
 }
 
@@ -17,6 +18,7 @@ export const ProyectCard = ({
   short_description,
   image,
   stack,
+  liveUrl,
   className = "",
 }: ProyectCardProps) => {
   return (
@@ -48,6 +50,7 @@ export const ProyectCard = ({
             description={description}
             stack={stack}
             image={image.src}
+            liveUrl={liveUrl}
           />
         </div>
       </div>

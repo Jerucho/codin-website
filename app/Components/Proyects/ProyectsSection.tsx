@@ -1,21 +1,34 @@
 "use client";
 import { Title } from "../Title";
 import { ProyectCard } from "./ProyectCard";
-import genesisColperIMG from "@/app/Assets/Img/Genesis.png";
-import transporteIMG from "@/app/Assets/Img/TransporteDonJuan.png";
-import cafeIMG from "@/app/Assets/Img/CafeNativo.png";
+import taliendoIMG from "@/app/Assets/Img/Taliendo.png";
 import { Button } from "@/components/ui/button";
 import { MoreProyects } from "./MoreProyects";
 import { useState } from "react";
+import cafeNativoIMG from "@/app/Assets/Img/CafeNativo.png";
+import raccoonIMG from "@/app/Assets/Img/Raccoon.png";
 
 const proyects = [
   {
-    title: "Web + Admin | Genesis Colper",
+    title: "Café Nativo",
     short_description:
-      "Sitio web corporativo con panel de administración para empresa de logística y transporte de libros",
+      "Sitio web corporativo para una cafetería artesanal que ofrece productos orgánicos y de comercio justo",
     description:
-      "Genesis Colper es una empresa que se dedica a la logística y transporte de libros. Necesitaba un sitio web para mostrar sus servicios y contactar con ellos." +
-      "Además, necesitaba un sistema de gestión para poder administrar sus datos y servicios.",
+      "Café Nativo es una cafetería artesanal que se especializa en ofrecer café de origen único y productos orgánicos. " +
+      "El sitio web fue diseñado para mostrar su filosofía de comercio justo, su proceso de tostado artesanal y su compromiso con la sostenibilidad. " +
+      "Incluye una sección de blog para compartir conocimientos sobre café y un sistema de reservas para eventos y catas.",
+    stack: ["React", "Next.js", "Tailwind CSS", "TypeScript", "Framer Motion"],
+    image: cafeNativoIMG,
+    liveUrl: "https://cafenativo.com",
+  },
+  {
+    title: "Raccoon",
+    short_description:
+      "Sistema de gestión de inventarios y ventas para una empresa de logística y distribución de libros",
+    description:
+      "Raccoon es un sistema de gestión de inventarios y ventas para una empresa de logística y distribución de libros. " +
+      "El sistema fue diseñado para ayudar a la empresa a administrar sus inventarios y ventas de manera eficiente. " +
+      "Incluye un panel de administración para poder administrar los datos de los clientes, productos y ventas.",
     stack: [
       "React",
       "Next.js",
@@ -26,27 +39,20 @@ const proyects = [
       "JWT",
       "Docker",
     ],
-    image: genesisColperIMG,
+    image: raccoonIMG,
   },
+
   {
-    title: "Sitio Web + Admin | Transporte Don Juan",
+    title: "Taliendo",
     short_description:
-      "Sitio web corporativo con panel de administración para empresa de transporte de cargas a nivel nacional",
+      "Software de gestión humana diseñado para ayudar a las empresas a administrar la productividad de los empleados",
     description:
-      "Don Juan es una empresa argentina con trayectoria en el rubro de transporte de cargas a nivel nacional. Con el objetivo de dar a conocer sus servicios y llegar a más clientes, decidió dar el paso hacia la digitalización creando su sitio web oficial..",
-    stack: ["React", "Next.js", "Tailwind CSS"],
-    image: transporteIMG,
-  },
-  {
-    title: "Sitio Web | Café Nativo",
-    short_description:
-      "Sitio web corporativo para una cafetería artesanal que ofrece productos orgánicos y de comercio justo",
-    description:
-      "Café Nativo es una cafetería artesanal que se especializa en ofrecer café de origen único y productos orgánicos. " +
-      "El sitio web fue diseñado para mostrar su filosofía de comercio justo, su proceso de tostado artesanal y su compromiso con la sostenibilidad. " +
+      "Taliendo es un software de gestión humana diseñado para ayudar a las empresas a administrar la productividad de los empleados. " +
+      "El software fue diseñado para ayudar a las empresas a administrar la productividad de los empleados. " +
       "Incluye una sección de blog para compartir conocimientos sobre café y un sistema de reservas para eventos y catas.",
-    stack: ["React", "Next.js", "Tailwind CSS", "TypeScript", "Framer Motion"],
-    image: cafeIMG,
+    stack: ["Angular", ".NET", "Bootstrap", "TypeScript", "Entity Framework"],
+    image: taliendoIMG,
+    liveUrl: "https://taliendo.com",
   },
 ];
 
@@ -80,6 +86,7 @@ export const ProyectsSection = ({
               description={proyect.description}
               image={proyect.image}
               stack={proyect.stack}
+              liveUrl={proyect.liveUrl}
             />
           ))}
         </div>
